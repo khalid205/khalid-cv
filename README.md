@@ -35,3 +35,5 @@ React Bootstrap Icons للأيقونات التعبيرية.
 
 بناء المشروع للإنتاج (Production Build)
 لإنشاء نسخة الإنتاج الخاصة بالموقع:npm run build
+
+رابط المشروع : https://khalid205.github.io/khalid-cv/
