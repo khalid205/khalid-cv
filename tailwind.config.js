@@ -7,7 +7,6 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // تعيين Cairo كخط أساسي للمشروع
         sans: ['Cairo', 'sans-serif'],
       },
     },
