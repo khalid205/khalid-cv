@@ -1,75 +1,37 @@
-# React + TypeScript + Vite
+مشروع سيرة ذاتية تفاعلية (Interactive Portfolio & CV)
+موقع شخصي وتفاعلي متكامل مصمم خصيصاً لعرض الخبرات، المهارات التقنية، والمشاريع البرمجية بأسلوب حديث واحترافي، مع تكامل حقيقي مع قاعدة بيانات لتحديث المهارات والمحتوى.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+التقنيات المستخدمة (Tech Stack)
+React (مع Hooks و TypeScript) لتطوير واجهات المستخدم الديناميكية.
 
-Currently, two official plugins are available:
+Tailwind CSS للتصميم العصري والمتجاوب.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Vite لأداء وسرعة فائقة في البناء والتطوير.
 
-## React Compiler
+Firebase لإدارة ومزامنة البيانات في الوقت الفعلي.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React Bootstrap Icons للأيقونات التعبيرية.
 
-## Expanding the ESLint configuration
+مميزات المشروع
+شريط تنقل تفاعلي: يتيح التنقل السلس بين الأقسام المختلفة (الرئيسية، الخبرات، المهارات التقنية، ومسار التقنيات).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+البطاقة الشخصية ونبذة تعريفيّة: إبراز المسمى الوظيفي والتعريف بالمهارات الأساسية.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+قسم المشاريع: عرض مشاريع GitHub مع إمكانية التصفية والبحث الفوري.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+نظام مهارات متزامن: إدارة وعرض المهارات التقنية متصلة بشكل مباشر مع Firebase.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+تصميم متجاوب بالكامل (Responsive): يدعم اللغة العربية (RTL) بشكل كامل مع خط Cairo الاحترافي وتصميم يناسب جميع الأجهزة.
 
-```
+التثبيت والتشغيل المحلي (Local Development)
+لتشغيل المشروع محلياً على جهازك، اتبع الخطوات التالية:
+استنساخ المستودع:git clone https://github.com/khalid205/khalid-cv.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+الدخول إلى مجلد المشروع:cd khalid-cv
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+تثبيت الحزم المطلوبة:npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+تشغيل خادم التطوير المحلي:npm run dev
 
-```
+بناء المشروع للإنتاج (Production Build)
+لإنشاء نسخة الإنتاج الخاصة بالموقع:npm run build
