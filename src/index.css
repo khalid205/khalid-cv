@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* تطبيق الخط الافتراضي على كامل المشروع وتحسين مظهر الحروف */
+body {
+  font-family: 'Cairo', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+:root {
+  --main-color: #2563eb; /* لون الأزرق المتناسق مع مشروعك */
+}
+
+/* start timeline page design  */
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline .timeline-content:before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  top: 0;
+}
+
+.timeline .timeline-content .year {
+  position: relative;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  width: 50px;
+  z-index: 2;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 25px);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline .timeline-content .left {
+  float: left;
+}
+
+.timeline .timeline-content .left .never {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fcb941;
+}
+
+.timeline .timeline-content .left:before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  right: -35px;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.timeline .timeline-content .left .content::before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent white;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+
+.timeline .timeline-content .right {
+  float: right;
+}
+
+.timeline .timeline-content .right:before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  left: -33px;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.timeline .timeline-content .right .content::before {
+  content: '';
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent white transparent transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+}
+
+.timeline .timeline-content .content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timeline .timeline-content .content h5 {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  text-align: left;
+}
+
+.timeline .timeline-content .content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+/*clearfix*/
+.clearfix {
+  clear: both;
+}
