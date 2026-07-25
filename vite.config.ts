@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/khalid-cv/', // يجب أن يكون مطابقاً لاسم المستودع تماماً وبينهما شرطات مائلة
+  base: './khalid-cv', // اجعلها نقطة وشرطة مائلة هكذا لتكون المسارات نسبية وتعمل في أي مسار فرعي
+  build: {
+    chunkSizeWarningLimit: 1000,
+  }
 })
